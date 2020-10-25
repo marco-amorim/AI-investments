@@ -51,17 +51,30 @@ const stockOptions = [
 	},
 ];
 
-walletReturn = 0;
-applicationPercentage = 0;
+let walletReturn = 0;
+let application = 0;
+let applicationPercentage = 0;
 
-stockOptions.map((stock) => {
+stockOptions.map((stock, index) => {
 	console.log(
-		stock.name + ' - ' + stock.application + ' - ' + stock.annualReturn
-	);
+		'[ ' +
+			'Ação: ' +
+			stock.name +
+			' / ' +
+			'Porcentagem: ' +
+			stock.application * 100 +
+			'% / ' +
+			'Retorno Anual: ' +
+			stock.annualReturn +
+			' ]'
+  );
+  console.log(index);
 	walletReturn += stock.annualReturn * stock.application;
-	applicationPercentage += stock.application;
+	application += stock.application;
 });
+
+applicationPercentage = application * 100;
 
 console.log(walletReturn);
 
-console.log(applicationPercentage);
+console.log(applicationPercentage + '%');
