@@ -51,17 +51,17 @@ const stockOptions = [
 	},
 ];
 
+let walletReturn = 0;
+let biggestReturn = 0;
+let biggestPosition;
+let application = 0;
+
 function swap(input, index_A, index_B) {
 	let temp = input[index_A].application;
 
 	input[index_A].application = input[index_B].application;
 	input[index_B].application = temp;
 }
-
-let walletReturn = 0;
-let biggestReturn = 0;
-let biggestPosition;
-let application = 0;
 
 function searchStocks(stocks, position) {
 	stocks.map((stock, index) => {
