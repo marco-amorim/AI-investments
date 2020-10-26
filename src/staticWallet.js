@@ -88,7 +88,7 @@ function searchStocks(stocks, position) {
 			biggestPosition = position;
 		}
 	});
-	console.log('Porcentagem: ' + Math.floor(application) * 100 + '%');
+	console.log('Porcentagem: ' + (application * 100).toFixed(0) + '%');
 	console.log('Retorno da Carteira: ' + walletReturn);
 
 	walletReturn = 0;
