@@ -1,3 +1,8 @@
+/*
+Utilize a huerística do vizinho para encontrar uma carteira de aplicação com o maior retorno anual.
+a. Seja a carteira inicial: 30% na ação A; 25% na ação B; 20% na ação C; 15% na ação D e 10% na ação E;
+*/
+
 const stockOptions = [
 	{
 		name: 'A',
