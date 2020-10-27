@@ -105,7 +105,6 @@ let position = 1;
 for (i = 0; i < stockOptions.length - i; i++) {
 	for (j = i; j < stockOptions.length; j++) {
 		swap(stockOptions, i, j);
-		console.log(i, j);
 		console.log('\n \n' + 'Posição: ' + position);
 		searchStocks(stockOptions, position);
 		swap(stockOptions, j, i);
