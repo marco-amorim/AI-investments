@@ -56,6 +56,9 @@ const stockOptions = [
 	},
 ];
 
+console.log('Carteira inicial:');
+console.log(stockOptions);
+
 let walletReturn = 0;
 let biggestReturn = 0;
 let biggestPosition;
@@ -100,13 +103,21 @@ function searchStocks(stocks, position) {
 	application = 0;
 }
 
+function searchStocksShowingPositions(stocks, position) {
+	console.log('\n \n' + 'Posição: ' + position);
+	searchStocks(stocks, position);
+}
+
 let position = 1;
 
 for (i = 0; i < stockOptions.length - i; i++) {
-	for (j = i; j < stockOptions.length; j++) {
+	for (j = i + 1; j < stockOptions.length; j++) {
+		if (j === 1) {
+			searchStocksShowingPositions(stockOptions, position);
+			position++;
+		}
 		swap(stockOptions, i, j);
-		console.log('\n \n' + 'Posição: ' + position);
-		searchStocks(stockOptions, position);
+		searchStocksShowingPositions(stockOptions, position);
 		swap(stockOptions, j, i);
 		position++;
 	}
